@@ -15,7 +15,6 @@ app.get('*',(req,res)=>{
 });
 
 // ejs
- 
 app.get('/test',(req,res)=>{
     res.render('test');
 });
