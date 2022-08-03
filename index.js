@@ -20,3 +20,5 @@ app.get('*',(req,res)=>{
 
 
 app.listen(8080);
+
+/// this is ejs sample 
