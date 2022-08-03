@@ -9,9 +9,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chymuralikrishna/nodejs-youtube.git",
-    "email": "chymuralikrishna@gmail.com",
-    "name": "chymuralikrishna"
-  },
+     },
   "author": "mk",
   "license": "ISC",
   "bugs": {
