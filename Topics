@@ -1,0 +1,25 @@
++. Fundamentals
+   ref: Fundamentals.js
+
++. core moudles
+      ref io-tut.js, code-module-http.js,code-module-fs.js
+      test-api.js
++nodemon
+
++package.json
+    npm init
+
++. File systems
+
+
+   ref fs,file-crud.js
++Asynchronous
+   new Promise()
+
+
++Event loop
+   Call Stack -> Node APIs ->CallbackQueus ---
+   ^_------------------------------------------
+
+
++Express Js

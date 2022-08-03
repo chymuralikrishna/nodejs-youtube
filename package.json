@@ -8,14 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chymuralikrishna/nodejs-youtube.git"
+    "url": "git+https://github.com/chymuralikrishna/nodejs-youtube.git",
+    "email": "chymuralikrishna@gmail.com",
+    "name": "chymuralikrishna"
   },
   "author": "mk",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/chymuralikrishna/nodejs-youtube/issues"
   },
-  "homepage": "https://github.com/chymuralikrishna/nodejs-youtube#readme"
+  "homepage": "https://github.com/chymuralikrishna/nodejs-youtube#readme",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "colors": "^1.4.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
 }
-
-
