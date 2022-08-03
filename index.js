@@ -1,27 +1,21 @@
-const express=require('express')
-const path=require('path')
+const express=require('express');
+const path=require('path');
 const app=express();
 const publicPath=path.join(__dirname,'public')
-// app.use(express.static(publicPath));
-app.set("view engine","ejs");
-app.get('/home',(req,res)=>{
+
+app.set('view engine','ejs');
+
+app.get('',(req,res)=>{
     res.sendFile(`${publicPath}/index.html`)
 });
-app.get('/',(req,res)=>{
-    res.sendFile(`${publicPath}/index.html`)
-});
-app.get('*',(req,res)=>{
-    res.sendFile(`${publicPath}/nopagefound.html`)
+// ejs
+app.get('/profile',(_,res)=>{
+    const user={name:'Murali Krishna Chintakindi',email:'chymuralikrishna@gmail.com',mobile:1234567890}
+    res.render('profile',{user})
 });
 
-// ejs
-app.get('/profile',(_,resp)=>{
-    const user={
-        name:'Peter',
-        email:'peter@test.com',
-        country:'USA'
-    }
-   resp.render('profile',{user})
+app.get('*',(req,res)=>{
+    res.sendFile(`${publicPath}/nopagefound.html`)
 });
 
 
