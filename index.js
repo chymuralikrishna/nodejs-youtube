@@ -1,24 +1,16 @@
-const express=require('express');
-const path=require('path');
+const express=require('express')
+const reqFilter=require('./midleware')
 const app=express();
-const publicPath=path.join(__dirname,'public')
-
+const route=express.Router();
+route.use(reqFilter);
 app.set('view engine','ejs');
 
-app.get('',(req,res)=>{
-    res.sendFile(`${publicPath}/index.html`)
-});
-// ejs
-app.get('/profile',(_,res)=>{
-    const user={name:'Murali Krishna Chintakindi',email:'chymuralikrishna@gmail.com',mobile:1234567890}
-    res.render('profile',{user})
-});
+app.get('/',(req,res)=>{
+    res.send('Welcome to Home page');
+})
 
-app.get('*',(req,res)=>{
-    res.sendFile(`${publicPath}/nopagefound.html`)
-});
-
-
+route.get('/users',(req,res)=>{
+    res.send('Welcome to Users page');
+})
+app.use('/',route);
 app.listen(8080);
-
-/// this is ejs sample 
