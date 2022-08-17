@@ -20,7 +20,7 @@ app.post('/addProduct',async (req,res)=>{
 app.put('/updateProduct/:name',async (req,res)=>{
     let db=await dbConnection();
     let data =await db.collection('product');
-    let result=await data.updateOne({name:req.params.name},
+    let result=await data.update({name:req.params.name},
         {$set:req.body});
     res.send(result);
 });

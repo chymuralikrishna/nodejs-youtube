@@ -1,16 +1,14 @@
-const {MongoClient}=require('mongodb');
-const url='mongodb://127.0.0.1:27017';
-const client=new MongoClient(url);
-const dbname='ecom-mk';
+const dbConnection=require('./mongodbUtil')
 
-async function getProducts(){
-    
-    await   client.connect();
-    let  db=client.db(dbname);
-    let  productList=db.collection('product');
-    let result=await productList.find({}).toArray();
-    console.log(result);
-    
+const insert=async ()=>{
+    const db=await dbConnection();
+    const result=db.insert(
+     [
+        {category:'mobile',name:'Iphone 6',cost:69999},
+        {category:'mobile',name:'Iphone 7',cost:69999},
+        {category:'mobile',name:'Iphone 8',cost:69999},
+        {category:'mobile',name:'Iphone 10',cost:69999}
+    ]
+)
 }
-
-getProducts();
+insert();
